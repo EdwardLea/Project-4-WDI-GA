@@ -22,16 +22,16 @@ def index():
 @api.route('/events/<int:event_id>/traveltime', methods=['GET'])
 def travel_time(event_id):
     event = Event.query.get(event_id)
-    # lat = request.args.get('lat')
-    # lng = request.args.get('lng')
-    # citymapper_url = 'https://developer.citymapper.com/api/1/traveltime'
-    # params = {
-    #     'startcoord': f'{lat},{lng}',
-    #     'endcoord': f'{event.lat},{event.lng}',
-    #     'key': city_mapper_key
-    # }
-    # citymapper_response = requests.get(citymapper_url, params=params).json()
-    # print(citymapper_response)
+    lat = request.args.get('lat')
+    lng = request.args.get('lng')
+    citymapper_url = 'https://developer.citymapper.com/api/1/traveltime'
+    params = {
+        'startcoord': f'{lat},{lng}',
+        'endcoord': f'{event.lat},{event.lng}',
+        'key': city_mapper_key
+    }
+    citymapper_response = requests.get(citymapper_url, params=params).json()
+    print(citymapper_response)
 
     unix_date = int(time.mktime(datetime.datetime.strptime(f'{event.date}', "%Y-%m-%d").timetuple()))
     print(unix_date)
@@ -40,7 +40,7 @@ def travel_time(event_id):
     darksky_response = requests.get(darksky_url).json()
     print(darksky_response)
     response = {
-        # 'citymapper': citymapper_response['travel_time_minutes'],
+        'citymapper': citymapper_response['travel_time_minutes'],
         'weather': darksky_response['daily']['data'][0]['icon']
     }
     print(response)
