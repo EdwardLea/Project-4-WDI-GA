@@ -84,7 +84,7 @@ class ClubsShow extends React.Component {
                   <button className="button is-info" onClick={this.handleFolllow}> Follow  </button>
                 )}
                 {Auth.isAuthenticated() && Auth.doesFollow(followed_by) &&(
-                  <button className="button is-info"  > Following  </button>
+                  <button className="button is-info"> Following  </button>
                 )}
               </div>
             </div>
