@@ -29,15 +29,6 @@ body{
   font-family: 'Barlow', sans-serif;
 }
 
-a.navbar-item{
-  transition: 0.5s;
-  &:hover {
-    text-decoration: underline;
-    text-decoration-color: $yellow;
-  }
-}
-
-
 .home{
   background: white;
 }
@@ -300,9 +291,6 @@ p.club-txt {
     >h6{
       text-align: center;
     }
-    >a{
-      margin-left: 150px;
-    }
     p{
       text-align: center;
     }
@@ -557,7 +545,7 @@ p.club-txt {
 
 .loader {
   position: relative;
-  background: url(/assets/images/BeeLogo.png) no-repeat;
+  background: url(assets/images/BeeLogo.png) no-repeat;
   background-position: center;
   border: 14px inset $yellow;
   width: 220px;

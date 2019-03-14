@@ -294,7 +294,7 @@ with app.app_context():
     greenwich_photo_tour = Event(
         name='Greenwich Photography Event',
         image='https://tinyurl.com/y5cd2kbz',
-        owner=Jody,
+        owner=Nawal,
         max_attendees=6,
         date='2019-03-15',
         hours=14,
@@ -312,7 +312,7 @@ with app.app_context():
 
     city_photo_tour = Event(
         name='The City Photography Trip',
-        image='https://tinyurl.com/y2a6cosv',
+        image='https://images.unsplash.com/photo-1507055298038-7e3f88856986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
         owner=Jody,
         max_attendees=6,
         date='2019-03-01',
@@ -405,31 +405,12 @@ with app.app_context():
     )
     richmond_park.save()
 
-    fifa_tourney = Event(
-        name='Fifa Tourney',
-        image='https://tinyurl.com/y2hr5mua',
-        owner=Nawal,
-        max_attendees=20,
-        date='2019-09-13',
-        hours=10,
-        minutes=00,
-        duration=160,
-        club=south_londoner_gamer,
-        attendees=[Jody, Mark, Ed, Nawal],
-        lat=53.0219186,
-        lng=-2.2297829,
-        description='Play with the best fifa players in South London',
-        category='Gaming',
-        address='149 Hook Rise South, Chessington, Surbiton'
-        )
-    fifa_tourney.save()
-
     mums_breakfast = Event(
         name='Mums BreakFast May',
         image='http://tinyurl.com/y6ayg466',
         owner=Wendy,
         max_attendees=20,
-        date='2019-06-11',
+        date='2019-05-30',
         hours=10,
         minutes=00,
         duration=120,

@@ -41,7 +41,7 @@ class EventsIndex extends React.Component {
 
 
   render() {
-    if(!this.state.events) return  <LoadingPage />
+    if(this.state.events.length === 0) return  <LoadingPage />
 
     return (
 

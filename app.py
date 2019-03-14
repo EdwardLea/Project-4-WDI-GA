@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from flask_bcrypt import Bcrypt
-from config.environment import db_uri 
+from config.environment import db_uri
 
 app = Flask(__name__, static_folder='dist')
 
