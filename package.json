@@ -10,6 +10,9 @@
     "build": "webpack -p",
     "postinstall": "[ \"$NODE_ENV\" = \"production\" ] && yarn build || exit 0"
   },
+  "engines": {
+    "node": "11.2.0"
+  },
   "dependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
