@@ -49,7 +49,8 @@ class ClubsShow extends React.Component {
   handleMessageSubmit(e){
     e.preventDefault()
     axios
-      .post(`/api/clubs/${this.state.club.id}/comment`,
+      .post(
+        `/api/clubs/${this.state.club.id}/comment`,
         this.state.data,
         {headers: { Authorization: `Bearer ${Auth.getToken()}`}
         })
