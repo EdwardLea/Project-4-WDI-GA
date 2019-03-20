@@ -5,6 +5,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const Dotenv = require('dotenv-webpack')
 
+const envPlugin = process.env.NODE_ENV === 'production' ? (
+  new webpack.EnvironmentPlugin({ ...process.env })
+) : (
+  new Dotenv()
+)
+
 module.exports = {
   entry: './src/app.js',
   output: {
@@ -49,7 +55,7 @@ module.exports = {
       filename: 'index.html',
       inject: 'body'
     }),
-    new Dotenv(),
+    envPlugin,
     new CopyWebpackPlugin([
       {from: 'src/assets', to: 'assets'}
     ])
