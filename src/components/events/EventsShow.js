@@ -105,7 +105,7 @@ class EventsShow extends React.Component {
                 {this.state.eventInformation.weather && (<span> <i className={this.getIconClass(this.state.eventInformation.weather)}></i> </span>)}
                 <p className="subtitle is-6"><strong> {name} </strong></p>
                 <p className="subtitle created has-text-grey"> Created by: {owner.username}</p>
-                <p className="subtitle created has-text-grey"> <i className="fas fa-map-marked"></i>: {this.state.eventInformation.travelTime} minutes to your event</p>
+                <p className="subtitle created has-text-grey"> <i className="fas fa-map-marked"></i>: {this.state.eventInformation.travelTime} minutes travel time</p>
                 {this.state.userLocation.lat && (
                   <div>
                     <button className="button dir-btn is-outlined is-info"><a href={`https://citymapper.com/directions?startcoord=${this.state.userLocation.lat},${this.state.userLocation.lng}&endcoord=${lat},${lng}`} target="blank"> Launch in City Mapper</a></button>

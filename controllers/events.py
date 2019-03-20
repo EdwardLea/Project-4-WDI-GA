@@ -31,14 +31,11 @@ def travel_time(event_id):
         'key': city_mapper_key
     }
     citymapper_response = requests.get(citymapper_url, params=params).json()
-    print(citymapper_response)
 
     unix_date = int(time.mktime(datetime.datetime.strptime(f'{event.date}', "%Y-%m-%d").timetuple()))
-    print(unix_date)
 
     darksky_url = f'https://api.darksky.net/forecast/{darksky_key}/{event.lat},{event.lng},{unix_date}?exclude=currently,flags,hourly,minutely,%20alerts'
     darksky_response = requests.get(darksky_url).json()
-    print(darksky_response)
     response = {
         'citymapper': citymapper_response['travel_time_minutes'],
         'weather': darksky_response['daily']['data'][0]['icon']

@@ -57,7 +57,7 @@ class ClubsShow extends React.Component {
         this.setState({...this.state, club: res.data, data: {content: ''} })
       })
       .then(() => this.props.history.push(`/clubs/${this.state.club.id}`))
-      .catch(() => this.setState({ errors: 'An error occured' }))
+      .catch(err => this.setState({ errors: err.response }))
   }
 
   handleFolllow(e){
