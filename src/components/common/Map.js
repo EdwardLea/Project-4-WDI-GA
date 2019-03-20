@@ -3,6 +3,7 @@ import mapboxgl from 'mapbox-gl'
 // import { Link, withRouter } from 'react-router-dom'
 
 mapboxgl.accessToken = process.env.MAP_BOX_TOKEN
+console.log(process.env, process.env.MAP_BOX_TOKEN)
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 class Map extends React.Component {
