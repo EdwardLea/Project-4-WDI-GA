@@ -6,13 +6,13 @@
 
 ## Technologies used
 
-* Python, Flask, SQLAlchemy, Marshmallow, PostgreSQL, Pipenv
-* React.js, Webpack, Babel, Axios, Yarn
 * HTML5, JavaScript ES6
+* React.js, Webpack, Babel, Axios, Yarn
 * CSS3, CSS Animation, SCSS & Bulma
+* Python, Flask, SQLAlchemy, Marshmallow, PostgreSQL, Pipenv
 * Insomnia, Mocha, Chai & Enzyme
-* Citymapper & Darksky
-* Git,GitHub
+* Citymapper & Darksky APIs
+* Git & GitHub
 * Heroku
 
 ## Application - Bee Social
@@ -51,12 +51,11 @@ The app was developed with React.js on the frontend and Python with a PostgreSQL
 
 ![Screenshot - Create Event](https://user-images.githubusercontent.com/39096986/54681591-aa434b00-4b04-11e9-93d1-c5eb7bf80dc4.png)
 
-
 ## Process
 
 This project was delivered with one other developer. We managed the project with an agile methodology with a clear timeframe for us to deliver as much of the scope as possible. To assist this process we used a Kanban Board in the form of Trello to plan and manage our tasks, we also utilising daily stand-ups to track progress and understand blockers. Working in a group gave me further experience using Git workflows to manage the development of the project using branches for feature development.
 
-The requirement to use an SQL Database meant we had to plan our database structure rigorously at the beginning of the project. Understand the relationship between data types was a key step, categories included many-to-many, one-to-many and one-to-one relationships. We designed the ERD for the application, which included primary database tables for User, Event and Clubs. A number of join tables were required for many-to-many relationships to allow attending and following functionality associated with 'Events' and 'Clubs' respectively.
+The requirement to use an SQL Database meant we had to plan our database structure rigorously at the beginning of the project. Understand the relationship between data types was a key step, categories included many-to-many, one-to-many and one-to-one relationships. We designed the ERD for the application, which included primary database tables for User, 'Event' and 'Clubs'. A number of join tables were required for many-to-many relationships to allow attending and following functionality associated with 'Events' and 'Clubs' respectively.
 
 Wireframes were produced to capture the layout of the application prior to any development taking place. This gave us a clear understanding of how each page would interact and a basic layout that we could apply consistently across the application.
 
